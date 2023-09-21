@@ -87,7 +87,7 @@ header{
     }
 
     .child{
-     background-image: url("/imagenes/honolulu.jpg");
+     background-image: url("./imagenes/honolulu.jpg");
      background-size: cover;
      width: 50%;
      height: 500px;
