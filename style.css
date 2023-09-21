@@ -134,6 +134,6 @@ header{
         }
       }
       .secoradores{
-          flex-wrap: wrap-reverse;
+          flex-wrap: wrap;
        }
     }
