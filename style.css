@@ -69,6 +69,8 @@ header{
     justify-content: center;
     gap: 40px;
     overflow: hidden;
+    margin-left: 20px; /* Agrega el margen izquierdo automático */
+    margin-right: 20px; /* Agrega el margen derecho automático */
   } 
 
   .card {
