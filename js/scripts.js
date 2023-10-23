@@ -1,46 +1,22 @@
-document.addEventListener("DOMContentLoaded", function() {
-
-    const cantidadS = document.getElementById("cantidadN");
-    const categoria = document.getElementById("categoryS");
-    const totalMontos = document.getElementById("totalMonto");
-    const sumarBotons = document.getElementById("sumarBoton");
 
 
-    sumarBotons.addEventListener("click", function() {
+function calcularTotal() {
+    const cant = document.getElementById('cantidadN').value;
+    const valor = document.getElementById('categoryS').value;
+    let resumenTotal = 0;
 
-        const cant = parseInt(cantidadS.value);
-        const category = categoria.value;
+    if (valor == 0) {
+        resumenTotal = 200 * cant;
+    } else if (valor == 1) {
+        resumenTotal = (200 * 0.2) * cant;
+    } else if (valor == 2) {
+        resumenTotal = (200 * 0.5) * cant;
+    } else if (valor == 3) {
+        resumenTotal = (200 * 0.8) * cant;
+    }
 
+    document.getElementById('totalMonto').innerText = resumenTotal.toFixed(2);
+}
 
-        const precios = {
-            Estudiante: 200,
-            Trainee: 200,
-            Junior: 200
-        };
-
-        const descuentos = {
-            Estudiante: 0.8, 
-            Trainee: 0.5, 
-            Junior: 0.15 
-        };
-
-        const subtotal = cant * precios[category];
-
-        const total = subtotal - (subtotal * descuentos[category]);
-
-        totalMontos.textContent = total.toFixed(2);
-    });
-});
-
-
-document.addEventListener("DOMContentLoaded", function() {
-
-    const form = document.querySelector("form");
-    const clearButton = document.getElementById("clearButton");
-
-
-    clearButton.addEventListener("click", function() {
-
-        form.reset();
-    });
-});
+const btnclick = document.getElementById('sumarBoton');
+btnclick.addEventListener('click', calcularTotal);

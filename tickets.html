@@ -77,7 +77,7 @@
             <p class="h1 text-uppercase">valor de ticket $200</p>
 
             <form action="">
-                <div class="row g-2">
+                <div class="row g-6">
                 <div class="col-md">
                     <div class="mb-3">
                     <input type="text" class="form-control" id="inputNombre" placeholder="Nombre"/>
@@ -100,7 +100,7 @@
             </section>
 
             <section class="container-fluid " px-5 style="width: 65%">
-                <div class="row g-2">
+                <div class="row g-6">
                     <div class="col-md">
                         <div class="mb-3">
                             <label for="cantidadN" class="form-label ms-1">Cantidad</label>
@@ -112,27 +112,31 @@
                         <div class="mb-3">
                             <label for="categoryS" class="form-label ms-1">Categoria</label>
                         <select id="categoryS" class="form-select" placeholder="Estudiante">
-                        <option>Estudiante</option>
-                        <option>Trainee</option>
-                        <option>Junior</option>
+                        <option selected="">--Seleccione--</option>
+                        <option value="0">Sin categoria</option>
+                        <option value="1">Estudiante</option>
+                        <option value="2">Trainee</option>
+                        <option value="3">Junior</option>
                         </select>
                         </div>
                     </div>
                     </div>
                 
 
-                    <p>Total a Pagar: $<span id="totalMonto">0</span></p>
+                    <p class="alert alert-primary">Total a Pagar: $<span id="totalMonto">0</span></p>
 
 
                 <div class="row">
-                    <div class="col-md">
-                        <div class="mb-3 d-flex justify-content-between">
-                            <button class="btn btn-success botonEnviar" type="button" style="width: 49%" id="clearButton">
+                        <div class="d-grid col-6 mx-auto">
+                            <button class="btn btn-success botonEnviar" type="reset">
                                 Borrar
                             </button>
-                            <button class="btn btn-success botonEnviar" type="button" style="width: 49%" id="sumarBoton">
+                        </div>
+                        <div class="d-grid col-6 mx-auto">
+                            <button class="btn btn-success botonEnviar" type="button" id="sumarBoton">
                                 Resumen
                             </button>
+                        </div>
                         </div>
                     </div>
                 </div>
