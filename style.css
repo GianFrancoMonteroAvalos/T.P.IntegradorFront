@@ -149,6 +149,9 @@ header{
        }
      }
 
+     .invalid-field {
+      border: 2px solid red;
+  }
      
 
      @media (max-width: 768px) {
